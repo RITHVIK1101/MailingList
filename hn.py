@@ -53,13 +53,13 @@ def send_email(smtp_server, smtp_port, sender_email, sender_password, to, subjec
 def main():
     smtp_server = 'smtp.gmail.com'  
     smtp_port = 587 
-    sender_email = 'ehscscouncil@gmail.com'  
-    sender_password = '0nc3up0n4t1m3' 
+    sender_email = 'ehscscouncil@gmail.com' #1  
+    sender_password = '0nc3up0n4t1m3'#2 
 
-    excel_file_path = '/Users/rithviksaba/Documents/test.xlsx' 
+    excel_file_path = '/Users/rithviksaba/Documents/test.xlsx'#3 
     data = read_excel_data(excel_file_path)
 
-    template_path = '/Users/rithviksaba/Documents/test.txt'  
+    template_path = '/Users/rithviksaba/Documents/test.txt'#4  
     for item in data:
         substituted_script = substitute_data(template_path, item)
         to = item['to'] 
